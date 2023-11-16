@@ -18,14 +18,14 @@ import SolotTest from './components/SolotTest.vue';
 
   export default{
     name: "App",
-    components: { SolotTest, ScopedSlot, Coral, Midway, LeyteGulf },
+    components: { SolotTest, ScopedSlot, "A" : Coral, "B" :Midway, "C" : LeyteGulf },
     data(){
       return {
-        currentTab : 'Coral',
+        currentTab : 'B',
         tabs : [
-          {id : "Coral", label : "Coral"},
-          {id : "Midway", label : "Midway"},
-          {id : "LeyteGulf", label : "LeyteGulf"},
+          {id : "A", label : "Coral"},
+          {id : "B", label : "Midway"},
+          {id : "C", label : "LeyteGulf"},
         ]
       }
     },

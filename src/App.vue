@@ -5,7 +5,9 @@
       @click="changeTab(tab.id)"
     >{{ tab.label }}</a>
     <br/>
-    <component :is="currentTab"></component>
+    <keep-alive include="Coral,Midway" >
+      <component :is="currentTab"></component>
+    </keep-alive>
     
 </template>
 
@@ -18,14 +20,14 @@ import SolotTest from './components/SolotTest.vue';
 
   export default{
     name: "App",
-    components: { SolotTest, ScopedSlot, "A" : Coral, "B" :Midway, "C" : LeyteGulf },
+    components: { SolotTest, ScopedSlot, Coral, Midway, LeyteGulf },
     data(){
       return {
-        currentTab : 'B',
+        currentTab : 'Coral',
         tabs : [
-          {id : "A", label : "Coral"},
-          {id : "B", label : "Midway"},
-          {id : "C", label : "LeyteGulf"},
+          {id : "Coral", label : "Coral"},
+          {id : "Midway", label : "Midway"},
+          {id : "LeyteGulf", label : "LeyteGulf"},
         ]
       }
     },

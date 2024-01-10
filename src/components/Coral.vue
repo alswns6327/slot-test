@@ -1,7 +1,7 @@
 <template>
     <div>
         <h2>Coral</h2>
-        <span>{{ new Date().getDate() }}</span>
+        <span>{{ new Date().toTimeString() }}</span>
     </div>
 </template>
 
